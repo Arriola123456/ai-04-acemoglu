@@ -171,7 +171,7 @@
     \column{0.30\textwidth}
       \IfFileExists{hand/derivacion-a-mano.pdf}{%
         \includegraphics[page=1,height=0.62\textheight]{hand/derivacion-a-mano.pdf}}{%
-        \fbox{\parbox{0.9\linewidth}{\centering\footnotesize hand derivation\\(\texttt{hand/derivacion-a-mano.pdf})}}}
+        \fbox{\parbox{0.8\linewidth}{\centering\scriptsize hand derivation\\ \texttt{hand/}\\ \texttt{derivacion-a-mano.pdf}}}}
       \\[2pt]{\scriptsize On screen: Equation (6) and the two cross-partials, by hand.}
     \column{0.68\textwidth}\footnotesize
       \textbf{Claim 1 (an LLM, cold): "welfare rises with AI accuracy --- better information cannot hurt.''}
@@ -182,7 +182,6 @@
         =\underbrace{g(\bar Y)G(\bar X)\Delta_X}_{\mathrm{DE}\ \ge 0}
         +\underbrace{\partial_{\tau_A}G(\bar X)\,\big(\Delta_G+G(\bar Y)\Delta_X\big)}_{\mathrm{IE}\ \le 0},
       \]
-      \vspace{-6pt}
       IE/DE rises with $\tau_A$; under Assumption 2 welfare is single-peaked with finite $\tau_A^\star$ and $\to 0$
       (Prop.\ 10); for $\varepsilon>4$ it drops to $0$ at $\tau_A^c$ (Prop.\ 11). \textbf{Verdict: wrong} --- the
       crowd-out of effort is dynamic and dominates once the AI is good.
