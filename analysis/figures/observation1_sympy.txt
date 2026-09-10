@@ -1,0 +1,6 @@
+g(t) = G'(t) = sqrt(2)*exp(-t/2)/(2*sqrt(pi)*sqrt(t))   (= phi(sqrt t)/sqrt t)
+dU/de = sqrt(2)*Delta_X*lambda_I*exp(-e*lambda_I/2 - s0/2 - tau/2)*erf(sqrt(2)*sqrt(X)/2)/(2*sqrt(pi)*sqrt(e*lambda_I + s0 + tau)) - e**(1/epsilon)
+d2U/de dX  = Delta_X*lambda_I*exp(-X/2 - e*lambda_I/2 - s0/2 - tau/2)/(2*pi*sqrt(X)*sqrt(e*lambda_I + s0 + tau))
+d2U/de dtau = sqrt(2)*Delta_X*lambda_I*(-e*lambda_I - s0 - tau - 1)*exp(-e*lambda_I/2 - s0/2 - tau/2)*erf(sqrt(2)*sqrt(X)/2)/(4*sqrt(pi)*(e*lambda_I + s0 + tau)**(3/2))
+g'(t) = sqrt(2)*(-t - 1)*exp(-t/2)/(4*sqrt(pi)*t**(3/2))
+sign check on 2000 random points: d2U/dedX > 0 in 1.000, d2U/dedtau < 0 in 1.000
