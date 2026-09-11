@@ -8,13 +8,17 @@ statements; February writes the effort cost with a curvature $\alpha$ and its
 stability threshold as $\alpha - 1 > 1/4$, May uses the Frisch elasticity
 $\varepsilon$ with $\alpha - 1 = 1/\varepsilon$, i.e. $\varepsilon < 4$. The
 issue's "Section 2" is *Related Literature* in both versions; the model is
-Section 3 (the static problem in 3.1–3.5, Observation 1 in 3.4).
+Section 3 (the static problem in 3.1–3.5, Observation 1 in 3.4). The ChatGPT
+study session in `prompts.md` and the hand derivation in `hand/` were done on
+the February version and use its $\alpha$ notation; everything else here uses
+the May version.
 
-> **Tools, stated up front.** Everything below — the reading, the Lean
-> formalization through EconCSLib, the numerics, this README and the deck — was
-> produced with Claude Code in one session, whose prompts are in `prompts.md`
-> (no Codex run this week; the issue does not mandate one). The LLM "cold"
-> prompts required by the trap are recorded in `prompts.md` as well.
+> **Tools, stated up front.** The model was studied first in a ChatGPT
+> session (page by page, Session 1 of `prompts.md`). Everything below — the
+> Lean formalization through EconCSLib, the numerics, this README and the deck
+> — was then produced with Claude Code, whose prompts are Session 3 of
+> `prompts.md` (no Codex run this week; the issue does not mandate one). The
+> LLM "cold" prompts required by the trap are Session 2 of `prompts.md`.
 
 ---
 
