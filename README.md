@@ -18,7 +18,8 @@ the May version.
 > Lean formalization through EconCSLib, the numerics, this README and the deck
 > — was then produced with Claude Code, whose prompts are Session 3 of
 > `prompts.md` (no Codex run this week; the issue does not mandate one). The
-> LLM "cold" prompts required by the trap are Session 2 of `prompts.md`.
+> two "cold" prompts the issue suggests were not put to a model; the trap is
+> answered from the paper itself (below, slide 4, and Session 3 of `prompts.md`).
 
 ---
 
@@ -143,7 +144,7 @@ substitutes for context.
 | File | What it is |
 |---|---|
 | `README.md` | This page |
-| `prompts.md` | Raw prompts and answers: the Claude Code session, and the LLM "cold" prompts of the trap |
+| `prompts.md` | Raw prompts and answers: the ChatGPT study session (13 turns) and the Claude Code session; the trap's cold prompts were not run |
 | `hand/hand-derivation.pdf` | Hand derivation, 3 pages: the primitives (states, private and public signals, effort cost in the February notation $e^\alpha/\alpha$, the AI signal), the production function and knowledge stocks, Assumption 1 ($\Delta_I = 0$, $\Delta_X > 0$), and Equation 6 |
 | `presentation.tex` / `.pdf` | The 5-minute deck (title + 4 slides) followed by backup slides: five figures, one per slide, three Lean slides, and the trap |
 | `lean/` | The EconCSLib paper folder `papers/AKO26KnowledgeCollapse/` as generated: 13 Specs, 13 closed proofs, reports, DAG, audit stubs, `docs/RUN_LOG.md`, `docs/CHECK_FAST_OUTPUT.txt` |

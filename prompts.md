@@ -5167,13 +5167,14 @@ Ya quedó derivado a Work mode para generar `prompt.md` con toda la conversació
 
 ## Session 2 — the trap prompts (an LLM, cold, without the paper)
 
-> **Pending — to be pasted by the author from a fresh ChatGPT chat with no
-> file attached:** the two prompts the issue asks for, *"Is welfare increasing
-> in AI accuracy?"* and *"Which assumptions do Acemoglu, Kong and Ozdaglar
-> relax in their paper?"*, with the answers exactly as returned. The verdicts
-> are on slide 4 of the deck and in the README: the intuitive "yes" is wrong
-> (Propositions 10–11), and the list of relaxed assumptions misses the one
-> production-side assumption Section 5 never touches, $\Delta_I = 0$.
+**Not run.** The issue suggests putting two questions to a model cold, *"Is
+welfare increasing in AI accuracy?"* and *"Which assumptions do the authors
+relax?"*. That was not done for this repository, and no answer is attributed
+to a model here. The trap is answered from the paper: the intuitive "yes" is
+wrong (Propositions 10–11), and the list of relaxed assumptions in Section 5
+misses the one production-side assumption it never touches, $\Delta_I = 0$
+(slide 4 of the deck, the README, and the assistant's own answers at the end
+of Session 3).
 
 ## Session 3 — Claude Code (Claude, Anthropic), 2026-09-09 and 2026-09-10
 
@@ -5242,6 +5243,12 @@ to be merged with this session into a single `prompts.md`.
 February version of the paper, and added that note to the README's version
 paragraph. Flagged that the export does not contain the two cold trap prompts
 the issue asks for (Session 2 above).
+
+**User:** `olvidate de los dos promts en frio, haz el push y luego yo hago el PR`
+
+**Assistant:** reworded slide 4 and the README so that no claim is attributed
+to a model that was never asked, recorded the decision in Session 2,
+recompiled the deck, committed and pushed the branch `analysis`.
 
 **Assistant's own answers to the trap prompts (not cold — written after
 reading the paper; kept here for contrast with Session 2):**
