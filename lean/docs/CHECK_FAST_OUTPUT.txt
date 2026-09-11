@@ -1,0 +1,14 @@
+$ lake build AKO26KnowledgeCollapse
+✔ [3995/4000] Built AKO26KnowledgeCollapse.MainTheorems (20s)
+✔ [3996/4000] Built AKO26KnowledgeCollapse.Assumptions (2.9s)
+✔ [3997/4000] Built AKO26KnowledgeCollapse.PaperInterface (2.7s)
+⚠ [3998/4000] Built AKO26KnowledgeCollapse.ProofInterface (9.0s)
+warning: papers/AKO26KnowledgeCollapse/ProofInterface.lean:103:2: Try this: intro ΔX lamI p0 τ X ε G g hΔ hG hlam hε hp0 hτ hanti e1 he1 e2 he2 hlt
+warning: papers/AKO26KnowledgeCollapse/ProofInterface.lean:257:2: Try this: intro Sig2 lamG I e hSig hlam hI hmono hnn X1 hX1 X2 hX2 hlt
+✔ [3999/4000] Built AKO26KnowledgeCollapse (3.5s)
+Build completed successfully (4000 jobs).
+
+$ python3 scripts/paper_contribution.py check AKO26KnowledgeCollapse --fast
+Build completed successfully (3997 jobs).
++ git diff --check -- papers/AKO26KnowledgeCollapse papers/AKO26KnowledgeCollapse.lean lakefile.toml ':(exclude)papers/AKO26KnowledgeCollapse/source/'
+exit code 0

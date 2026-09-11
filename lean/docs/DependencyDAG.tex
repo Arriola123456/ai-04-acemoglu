@@ -1,0 +1,132 @@
+\documentclass[tikz,border=10pt]{standalone}
+\input{../../../docs/tikz/dag_preamble.tex}
+
+\begin{document}
+\begin{tikzpicture}[
+  x=1cm,
+  y=1cm,
+  every node/.append style={outer sep=4pt}
+]
+
+\dagPaperMetadata
+  {AI, Human Cognition and Knowledge Collapse}
+  {Acemoglu, Kong, Ozdaglar}
+  {NBER WP 34910 (MIT version, May 5, 2026)}
+  {2026}
+  {https://www.nber.org/papers/w34910}
+
+\dagPaperLegendRightOfMetadata{
+\node[dag_result, dag_template_legend] (legRes) at (0,0) {checked named\\result};
+\node[dag_lemma, dag_template_legend] (legLem) at (4.0,0) {checked displayed\\equation};
+\node[dag_model, dag_template_legend] (legDef) at (8.0,0) {checked source\\definition};
+\node[dag_partial, dag_template_legend] (legPart) at (12.0,0) {declared\\boundary};
+\node[dag_unformalized, dag_template_legend] (legUn) at (16.0,0) {out of scope\\(read-only)};
+}
+\daglegend{(legRes)(legLem)(legDef)(legPart)(legUn)}{Legend}
+
+\begin{dagPaperBody}
+
+\node[font=\sffamily\bfseries\Large, align=center, text width=22cm]
+  (Class) at (6,0.6) {
+  Status: partially formalized --- the static block (Sections 3.1--3.6) is proved;\\
+  Gaussian facts and the boundary $X=0$ are declared; dynamics and welfare out of scope
+};
+
+\node[dag_model, text width=6.0cm] (Model) at (-4,-2.2) {
+  \textbf{Model, Sections 3.1--3.3} \\
+  success probabilities $G(X)$, $G(Y)$;\\
+  $Y=\sigma^{-2}+\lambda_I e+\tau_A$ (Eq.\ 4);\\
+  effort cost $\frac{\varepsilon}{\varepsilon+1}e^{(\varepsilon+1)/\varepsilon}$
+};
+
+\node[dag_partial, text width=5.6cm] (Gauss) at (3.5,-2.2) {
+  \textbf{Gaussian boundary} \\
+  $G=2\Phi(\sqrt{\cdot})-1$, $G'=g>0$,\\
+  $g$ decreasing, $g'<0$: hypotheses,\\
+  not derived (checked with SymPy)
+};
+
+\node[dag_lemma, text width=5.0cm] (Eq6) at (10,-2.2) {
+  \textbf{Equation (6)} \\
+  $U=f_{00}+G(X)\Delta_G+G(X)G(Y)\Delta_X-\mathrm{cost}$\\
+  under $\Delta_I=0$
+};
+
+\node[dag_lemma, text width=5.0cm] (FOC) at (16,-2.2) {
+  \textbf{First-order condition} \\
+  $\partial U/\partial e=\Delta_X G(X)\lambda_I g(Y)-e^{1/\varepsilon}$
+};
+
+\node[dag_result, text width=5.4cm] (Obs1X) at (-4,-6.2) {
+  \textbf{Observation 1 (complement)} \\
+  $\partial^2U/\partial e\partial X=\Delta_X\lambda_I g(X)g(Y)>0$
+};
+
+\node[dag_result, text width=5.4cm] (Obs1T) at (3.5,-6.2) {
+  \textbf{Observation 1 (substitute)} \\
+  $\partial^2U/\partial e\partial\tau_A=\Delta_X G(X)\lambda_I g'(Y)<0$
+};
+
+\node[dag_result, text width=5.6cm] (MU) at (10,-6.2) {
+  \textbf{Section 3.5: marginal utility} \\
+  strictly decreasing in $e$;\\
+  best response exists and is unique
+};
+
+\node[dag_result, text width=5.2cm] (Obs2) at (16,-6.2) {
+  \textbf{Observation 2} \\
+  effort $\uparrow$ in $X$, $\downarrow$ in $\tau_A$\\
+  (two-solution comparison)
+};
+
+\node[dag_result, text width=5.6cm] (L1) at (3.5,-10.2) {
+  \textbf{Lemma 1} \\
+  $F$ strictly increasing on $(0,\infty)$;\\
+  $0<F(X)<\Sigma^{-2}$
+};
+
+\node[dag_partial, text width=5.2cm] (Zero) at (-4,-10.2) {
+  \textbf{Boundary $X=0$} \\
+  paper: $F(0)=0$ via $1/0=+\infty$;\\
+  Lean: $0^{-1}=0$ gives $\Sigma^{-2}$
+};
+
+\node[dag_result, text width=5.6cm] (P2) at (10,-10.2) {
+  \textbf{Proposition 2} \\
+  $F$ pointwise $\uparrow$ in $I$, $\downarrow$ in $\tau_A$
+};
+
+\node[dag_unformalized, text width=5.2cm] (Dyn) at (16,-10.2) {
+  \textbf{Lemma 2, Propositions 3--16, Section 4} \\
+  steady states, collapse, welfare:\\
+  read-only, not formalized
+};
+
+\node[dag_template_note, text width=11cm, align=center] (Ext) at (3,-14.0) {
+  \textbf{Extension:} with $\Delta_I>0$ the marginal benefit of effort at $X=0$ is
+  $\Delta_I\lambda_I g(\sigma^{-2}+\tau_A)>0$ and $F(0)>0$ --- the collapse fixed point
+  depends on the production-side assumption $\Delta_I=0$ that Section 5 never relaxes
+};
+
+\draw[dag_arrow] (Model) -- (Eq6);
+\draw[dag_dashed_arrow] (Gauss) -- (Eq6);
+\draw[dag_arrow] (Eq6) -- (FOC);
+\draw[dag_arrow] (FOC) -- (Obs1X);
+\draw[dag_arrow] (FOC) -- (Obs1T);
+\draw[dag_arrow] (FOC) -- (MU);
+\draw[dag_arrow] (MU) -- (Obs2);
+\draw[dag_arrow] (Obs1X) -- (Obs2);
+\draw[dag_arrow] (Obs1T) -- (Obs2);
+\draw[dag_arrow] (Model) -- (L1);
+\draw[dag_dashed_arrow] (Zero) -- (L1);
+\draw[dag_arrow] (L1) -- (P2);
+\draw[dag_arrow] (Obs2) -- (P2);
+\draw[dag_dashed_arrow] (P2) -- (Dyn);
+\draw[dag_dashed_arrow] (Zero) -- (Ext);
+
+\node[font=\sffamily\bfseries\large, align=center] at (6,-16.5)
+  {Proof endpoints: \texttt{ProofInterface.lean}; helper and extensions: \texttt{MainTheorems.lean}};
+
+\end{dagPaperBody}
+\end{tikzpicture}
+\end{document}

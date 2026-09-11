@@ -1,0 +1,293 @@
+{
+  "schema": 1,
+  "paper": "AKO26KnowledgeCollapse",
+  "source_url": "https://economics.mit.edu/sites/default/files/2026-05/AI%2C%20Human%20Cognition%20and%20Knowledge%20Collapse%2005-05-26.pdf",
+  "source_version": "MIT working-paper version dated May 5, 2026 (NBER Working Paper 34910, issued February 2026)",
+  "source_artifact_path": "papers/AKO26KnowledgeCollapse/source-audited.pdf",
+  "source_artifact_sha256": "63e37f2af463422e587c9bd81cda3bb555404a6ad65763aca0f9bebb8e2d4ec6",
+  "source_inventory_kind": "pinned_statement_target_scaffold",
+  "source_curated": false,
+  "seed_scaffold": true,
+  "source_coverage_mode": "named_theoretical_statements",
+  "semantic_contract_policy": {
+    "schema": 1,
+    "activation": "Before Lean drafting, independently inventory every material source atom against exact pinned source quote bytes; do not infer that inventory from declaration, binder, field, or function names. After a source item has an audited paper-local specification and a theorem/lemma proving or refuting it, add top-level semantic_contract_schema: 1, classify every item with an explicit claim_bearing Boolean, and record semantic_contract for each true item. At formalized closeout, also add source_claim_atoms_schema: 1 and source_spec_correspondence_schema: 1. Bind each atom to an elaborated Spec component and account for every material Lean-closure terminal, including proof and instance arguments, by source atom, approved source correction/additional assumption, checked Lean derivation, or version-pinned foundation basis. Each statement-first row supplies an inactive semantic_contract_template pairing its transparent `...Spec : Prop` with its theorem/lemma. Promote that exact template only after the independent source audit passes, the theorem has exactly the transparent Spec type, the closure record passes, and the proof hole is replaced. Do not manufacture a contract from the temporary by-sorry statement skeleton alone. Legacy v10 evidence remains readable but is not a v11 realization credential. For a source-game result whose feasible-action equilibrium comparison uses a conditional/posterior or observation-contingent value, add the separately byte-pinned `semantic_context_requirements` kind `strategic_observation_totality`; it requires an explicit off-path/zero-probability totality audit and cannot be satisfied by a Lean-only default value.",
+    "required_fields": [
+      "spec_declaration",
+      "evidence_declaration",
+      "evidence_mode",
+      "semantic_shape"
+    ],
+    "evidence_modes": [
+      "proves",
+      "refutes"
+    ],
+    "semantic_shapes": [
+      "plain"
+    ],
+    "shape_policy": "Only plain exact-proposition contracts are currently enforced. Do not record a specialized runtime, preprocessing, or refinement shape until the audit implements its structural check.",
+    "source_defect_routing": "Every repaired_in_lean source-proof defect must be linked from a successfully checked contract item through source_defect_ids."
+  },
+  "items": {
+    "paper_equation_6_expected_utility": {
+      "statement": "Under (5), P(|x - θ| ≤ 1) = G(X) and P(|y - θ_i| ≤ 1) = G(Y). Therefore, using the fact that ΔI = 0, agent i's expected period-t utility can be written as U = f(0,0) + G(X) ΔG + G(X) G(Y) ΔX - (ε/(ε+1)) e^((ε+1)/ε), where ΔG = f(1,0) - f(0,0), ΔI = f(0,1) - f(0,0), ΔX = f(1,1) - f(1,0) - f(0,1) + f(0,0).",
+      "source_item": "Equation (6): expected period utility under Assumption 1 (ΔI = 0)",
+      "source_kind": "claim",
+      "source_location": "Section 3.3, PDF page 15 (printed page 14), Equation (6); definitions of ΔG, ΔI, ΔX in Section 3.1, PDF page 10 (printed page 9)",
+      "source_url": "https://economics.mit.edu/sites/default/files/2026-05/AI%2C%20Human%20Cognition%20and%20Knowledge%20Collapse%2005-05-26.pdf",
+      "source_status": "pinned statement-spec transcription; independent source audit pending",
+      "spec_lean_declarations": [
+        "paper_equation_6_expected_utilitySpec"
+      ],
+      "proof_lean_declarations": [
+        "paper_equation_6_expected_utility"
+      ],
+      "semantic_contract_template": {
+        "spec_declaration": "paper_equation_6_expected_utilitySpec",
+        "evidence_declaration": "paper_equation_6_expected_utility",
+        "evidence_mode": "proves",
+        "semantic_shape": "plain"
+      }
+    },
+    "paper_first_order_condition": {
+      "statement": "Using (4), the first-order condition is ∂U/∂e = ΔX G(X) · λI g(σ^{-2} + λI e + τA) - e^{1/ε}.",
+      "source_item": "First-order condition for effort (Section 3.5)",
+      "source_kind": "claim",
+      "source_location": "Section 3.5, PDF page 16 (printed page 15), display after 'the first-order condition is'; also Section 3.4, PDF page 15 (printed page 14)",
+      "source_url": "https://economics.mit.edu/sites/default/files/2026-05/AI%2C%20Human%20Cognition%20and%20Knowledge%20Collapse%2005-05-26.pdf",
+      "source_status": "pinned statement-spec transcription; independent source audit pending",
+      "spec_lean_declarations": [
+        "paper_first_order_conditionSpec"
+      ],
+      "proof_lean_declarations": [
+        "paper_first_order_condition"
+      ],
+      "semantic_contract_template": {
+        "spec_declaration": "paper_first_order_conditionSpec",
+        "evidence_declaration": "paper_first_order_condition",
+        "evidence_mode": "proves",
+        "semantic_shape": "plain"
+      }
+    },
+    "paper_observation_1_complement": {
+      "statement": "Observation 1. Public precision Xt complements human effort, while agentic-AI precision τA substitutes for human effort. That is: ∂²U/∂e∂X > 0, ∂²U/∂e∂τA < 0. Formally, ∂U/∂e = ΔX G(X) λI g(Y) - e^{1/ε} ⇒ ∂²U/∂e∂X = ΔX λI g(X) g(Y) > 0.",
+      "source_item": "Observation 1, complement part: public precision complements human effort",
+      "source_kind": "claim",
+      "source_location": "Section 3.4, PDF pages 15-16 (printed pages 14-15), Observation 1 and the display ∂²U/∂e∂X = ΔX λI g(X) g(Y) > 0",
+      "source_url": "https://economics.mit.edu/sites/default/files/2026-05/AI%2C%20Human%20Cognition%20and%20Knowledge%20Collapse%2005-05-26.pdf",
+      "source_status": "pinned statement-spec transcription; independent source audit pending",
+      "spec_lean_declarations": [
+        "paper_observation_1_complementSpec"
+      ],
+      "proof_lean_declarations": [
+        "paper_observation_1_complement"
+      ],
+      "semantic_contract_template": {
+        "spec_declaration": "paper_observation_1_complementSpec",
+        "evidence_declaration": "paper_observation_1_complement",
+        "evidence_mode": "proves",
+        "semantic_shape": "plain"
+      }
+    },
+    "paper_observation_1_substitute": {
+      "statement": "Because the probability of success G(Y) exhibits diminishing returns in precision, higher τA reduces the marginal gain from additional human effort: ∂²U/∂e∂τA = ΔX G(X) λI g'(Y) < 0.",
+      "source_item": "Observation 1, substitute part: agentic-AI precision substitutes for human effort",
+      "source_kind": "claim",
+      "source_location": "Section 3.4, PDF page 16 (printed page 15), display ∂²U/∂e∂τA = ΔX G(X) λI g'(Y) < 0",
+      "source_url": "https://economics.mit.edu/sites/default/files/2026-05/AI%2C%20Human%20Cognition%20and%20Knowledge%20Collapse%2005-05-26.pdf",
+      "source_status": "pinned statement-spec transcription; independent source audit pending",
+      "spec_lean_declarations": [
+        "paper_observation_1_substituteSpec"
+      ],
+      "proof_lean_declarations": [
+        "paper_observation_1_substitute"
+      ],
+      "semantic_contract_template": {
+        "spec_declaration": "paper_observation_1_substituteSpec",
+        "evidence_declaration": "paper_observation_1_substitute",
+        "evidence_mode": "proves",
+        "semantic_shape": "plain"
+      }
+    },
+    "paper_marginal_utility_strictly_decreasing": {
+      "statement": "The marginal benefit term is weakly decreasing in e because g(·) is decreasing, while the marginal cost e^{1/ε} is strictly increasing. Consequently, ∂U/∂e is strictly decreasing in e.",
+      "source_item": "Section 3.5: the marginal utility of effort is strictly decreasing in effort",
+      "source_kind": "claim",
+      "source_location": "Section 3.5, PDF page 16 (printed page 15), text 'Consequently, ∂U/∂e is strictly decreasing in e'",
+      "source_url": "https://economics.mit.edu/sites/default/files/2026-05/AI%2C%20Human%20Cognition%20and%20Knowledge%20Collapse%2005-05-26.pdf",
+      "source_status": "pinned statement-spec transcription; independent source audit pending",
+      "spec_lean_declarations": [
+        "paper_marginal_utility_strictly_decreasingSpec"
+      ],
+      "proof_lean_declarations": [
+        "paper_marginal_utility_strictly_decreasing"
+      ],
+      "semantic_contract_template": {
+        "spec_declaration": "paper_marginal_utility_strictly_decreasingSpec",
+        "evidence_declaration": "paper_marginal_utility_strictly_decreasing",
+        "evidence_mode": "proves",
+        "semantic_shape": "plain"
+      }
+    },
+    "paper_best_response_unique": {
+      "statement": "So U is strictly concave in effort and admits a unique and finite maximizer. Let us then define the best-response effort e(X, τA) as the unique solution to the first-order condition: e(X, τA) := {e ≥ 0 | ΔX G(X) · λI g(σ^{-2} + λI e + τA) = e^{1/ε}}.",
+      "source_item": "Section 3.5: the first-order condition has at most one solution (unique maximizer)",
+      "source_kind": "claim",
+      "source_location": "Section 3.5, PDF page 16 (printed page 15), 'admits a unique and finite maximizer' and the definition of the best-response effort e(X, τA)",
+      "source_url": "https://economics.mit.edu/sites/default/files/2026-05/AI%2C%20Human%20Cognition%20and%20Knowledge%20Collapse%2005-05-26.pdf",
+      "source_status": "pinned statement-spec transcription; independent source audit pending",
+      "spec_lean_declarations": [
+        "paper_best_response_uniqueSpec"
+      ],
+      "proof_lean_declarations": [
+        "paper_best_response_unique"
+      ],
+      "semantic_contract_template": {
+        "spec_declaration": "paper_best_response_uniqueSpec",
+        "evidence_declaration": "paper_best_response_unique",
+        "evidence_mode": "proves",
+        "semantic_shape": "plain"
+      }
+    },
+    "paper_best_response_exists": {
+      "statement": "Moreover, we have ∂U/∂e at e=0 = ΔX G(X) · λI g(σ^{-2} + τA) ≥ 0 and lim_{e→+∞} ∂U/∂e < 0, so U is strictly concave in effort and admits a unique and finite maximizer.",
+      "source_item": "Section 3.5: the first-order condition has a solution (a finite maximizer exists)",
+      "source_kind": "claim",
+      "source_location": "Section 3.5, PDF page 16 (printed page 15), displays ∂U/∂e at e = 0 ≥ 0 and lim ∂U/∂e < 0, 'admits a unique and finite maximizer'",
+      "source_url": "https://economics.mit.edu/sites/default/files/2026-05/AI%2C%20Human%20Cognition%20and%20Knowledge%20Collapse%2005-05-26.pdf",
+      "source_status": "pinned statement-spec transcription; independent source audit pending",
+      "spec_lean_declarations": [
+        "paper_best_response_existsSpec"
+      ],
+      "proof_lean_declarations": [
+        "paper_best_response_exists"
+      ],
+      "semantic_contract_template": {
+        "spec_declaration": "paper_best_response_existsSpec",
+        "evidence_declaration": "paper_best_response_exists",
+        "evidence_mode": "proves",
+        "semantic_shape": "plain"
+      }
+    },
+    "paper_observation_2_increasing_in_X": {
+      "statement": "Observation 2. The best-response effort e(X, τA) is increasing in X and decreasing in τA, strictly so for all X > 0. (Observation 1 together with standard monotone comparative statics arguments, e.g. Topkis' theorem.)",
+      "source_item": "Observation 2 (in X): best-response effort is increasing in public precision",
+      "source_kind": "claim",
+      "source_location": "Section 3.5, PDF page 17 (printed page 16), Observation 2",
+      "source_url": "https://economics.mit.edu/sites/default/files/2026-05/AI%2C%20Human%20Cognition%20and%20Knowledge%20Collapse%2005-05-26.pdf",
+      "source_status": "pinned statement-spec transcription; independent source audit pending",
+      "spec_lean_declarations": [
+        "paper_observation_2_increasing_in_XSpec"
+      ],
+      "proof_lean_declarations": [
+        "paper_observation_2_increasing_in_X"
+      ],
+      "semantic_contract_template": {
+        "spec_declaration": "paper_observation_2_increasing_in_XSpec",
+        "evidence_declaration": "paper_observation_2_increasing_in_X",
+        "evidence_mode": "proves",
+        "semantic_shape": "plain"
+      }
+    },
+    "paper_observation_2_decreasing_in_tau": {
+      "statement": "Observation 2. The best-response effort e(X, τA) is increasing in X and decreasing in τA, strictly so for all X > 0.",
+      "source_item": "Observation 2 (in τA): best-response effort is decreasing in agentic-AI precision",
+      "source_kind": "claim",
+      "source_location": "Section 3.5, PDF page 17 (printed page 16), Observation 2",
+      "source_url": "https://economics.mit.edu/sites/default/files/2026-05/AI%2C%20Human%20Cognition%20and%20Knowledge%20Collapse%2005-05-26.pdf",
+      "source_status": "pinned statement-spec transcription; independent source audit pending",
+      "spec_lean_declarations": [
+        "paper_observation_2_decreasing_in_tauSpec"
+      ],
+      "proof_lean_declarations": [
+        "paper_observation_2_decreasing_in_tau"
+      ],
+      "semantic_contract_template": {
+        "spec_declaration": "paper_observation_2_decreasing_in_tauSpec",
+        "evidence_declaration": "paper_observation_2_decreasing_in_tau",
+        "evidence_mode": "proves",
+        "semantic_shape": "plain"
+      }
+    },
+    "paper_lemma_1_transition_strictly_increasing": {
+      "statement": "Lemma 1. The state transition map F is continuous and strictly increasing on R≥0, with F(0) = 0 and F(+∞) = Σ^{-2}. Here F(X) := [Σ² + (X + λG I e(X, τA))^{-1}]^{-1}.",
+      "source_item": "Lemma 1 (monotonicity): the state transition map F is strictly increasing",
+      "source_kind": "lemma",
+      "source_location": "Section 3.6, PDF page 18 (printed page 17), Lemma 1; transition map F defined in Equation (8), PDF page 17 (printed page 16)",
+      "source_url": "https://economics.mit.edu/sites/default/files/2026-05/AI%2C%20Human%20Cognition%20and%20Knowledge%20Collapse%2005-05-26.pdf",
+      "source_status": "pinned statement-spec transcription; independent source audit pending",
+      "spec_lean_declarations": [
+        "paper_lemma_1_transition_strictly_increasingSpec"
+      ],
+      "proof_lean_declarations": [
+        "paper_lemma_1_transition_strictly_increasing"
+      ],
+      "semantic_contract_template": {
+        "spec_declaration": "paper_lemma_1_transition_strictly_increasingSpec",
+        "evidence_declaration": "paper_lemma_1_transition_strictly_increasing",
+        "evidence_mode": "proves",
+        "semantic_shape": "plain"
+      }
+    },
+    "paper_lemma_1_transition_bounds": {
+      "statement": "Public precision can never exceed Σ^{-2} and thus F maps into a bounded interval: 0 ≤ F(X) < Σ^{-2} for all finite X.",
+      "source_item": "Lemma 1 (bounds): the transition map takes values in (0, Σ^{-2})",
+      "source_kind": "claim",
+      "source_location": "Section 3.5, PDF page 18 (printed page 17), display '0 ≤ F(X) < Σ^{-2} for all finite X'",
+      "source_url": "https://economics.mit.edu/sites/default/files/2026-05/AI%2C%20Human%20Cognition%20and%20Knowledge%20Collapse%2005-05-26.pdf",
+      "source_status": "pinned statement-spec transcription; independent source audit pending",
+      "spec_lean_declarations": [
+        "paper_lemma_1_transition_boundsSpec"
+      ],
+      "proof_lean_declarations": [
+        "paper_lemma_1_transition_bounds"
+      ],
+      "semantic_contract_template": {
+        "spec_declaration": "paper_lemma_1_transition_boundsSpec",
+        "evidence_declaration": "paper_lemma_1_transition_bounds",
+        "evidence_mode": "proves",
+        "semantic_shape": "plain"
+      }
+    },
+    "paper_proposition_2_increasing_in_I": {
+      "statement": "Proposition 2 (Comparative Statics of F). The function F is pointwise increasing in I and pointwise decreasing in τA, strictly so for all X > 0.",
+      "source_item": "Proposition 2 (Comparative Statics of F), aggregation scale I",
+      "source_kind": "proposition",
+      "source_location": "Section 3.6, PDF page 19 (printed page 18), Proposition 2",
+      "source_url": "https://economics.mit.edu/sites/default/files/2026-05/AI%2C%20Human%20Cognition%20and%20Knowledge%20Collapse%2005-05-26.pdf",
+      "source_status": "pinned statement-spec transcription; independent source audit pending",
+      "spec_lean_declarations": [
+        "paper_proposition_2_increasing_in_ISpec"
+      ],
+      "proof_lean_declarations": [
+        "paper_proposition_2_increasing_in_I"
+      ],
+      "semantic_contract_template": {
+        "spec_declaration": "paper_proposition_2_increasing_in_ISpec",
+        "evidence_declaration": "paper_proposition_2_increasing_in_I",
+        "evidence_mode": "proves",
+        "semantic_shape": "plain"
+      }
+    },
+    "paper_proposition_2_decreasing_in_tau": {
+      "statement": "A higher agentic-AI precision τA depresses effort today (since recommendations substitute for private learning), reducing the flow of new human-generated knowledge into the stock of general knowledge: F is pointwise decreasing in τA, strictly so for all X > 0.",
+      "source_item": "Proposition 2 (Comparative Statics of F), agentic-AI precision τA",
+      "source_kind": "proposition",
+      "source_location": "Section 3.6, PDF page 19 (printed page 18), Proposition 2 and the following paragraph",
+      "source_url": "https://economics.mit.edu/sites/default/files/2026-05/AI%2C%20Human%20Cognition%20and%20Knowledge%20Collapse%2005-05-26.pdf",
+      "source_status": "pinned statement-spec transcription; independent source audit pending",
+      "spec_lean_declarations": [
+        "paper_proposition_2_decreasing_in_tauSpec"
+      ],
+      "proof_lean_declarations": [
+        "paper_proposition_2_decreasing_in_tau"
+      ],
+      "semantic_contract_template": {
+        "spec_declaration": "paper_proposition_2_decreasing_in_tauSpec",
+        "evidence_declaration": "paper_proposition_2_decreasing_in_tau",
+        "evidence_mode": "proves",
+        "semantic_shape": "plain"
+      }
+    }
+  }
+}

@@ -1,0 +1,270 @@
+{
+  "schema": 1,
+  "paper": "AKO26KnowledgeCollapse",
+  "acceptance_credential": false,
+  "future_paper_intake_only": true,
+  "state": "draft",
+  "inventory_scope": "complete named theoretical source surface",
+  "inventory_complete": false,
+  "source_item_identity": "source-location+normalized-statement-sha256-v1",
+  "source_artifact_path": "papers/AKO26KnowledgeCollapse/source-audited.pdf",
+  "source_artifact_sha256": "63e37f2af463422e587c9bd81cda3bb555404a6ad65763aca0f9bebb8e2d4ec6",
+  "source_version": "MIT working-paper version dated May 5, 2026 (NBER Working Paper 34910, issued February 2026)",
+  "source_text_artifact": {
+    "schema": 1,
+    "path": "papers/AKO26KnowledgeCollapse/source.txt",
+    "sha256": "1731053fb9ce56b2157c375a4b10434fa0d653bad9b56dabf36e68934e3f83d3",
+    "normalization": "utf8-lf-v1",
+    "extraction": {
+      "schema": 1,
+      "source_artifact_path": "papers/AKO26KnowledgeCollapse/source-audited.pdf",
+      "source_artifact_sha256": "63e37f2af463422e587c9bd81cda3bb555404a6ad65763aca0f9bebb8e2d4ec6",
+      "tool": "pdftotext",
+      "options": []
+    }
+  },
+  "items": [
+    {
+      "source_item": "Equation (6): expected period utility under Assumption 1 (ΔI = 0)",
+      "source_location": "Section 3.3, PDF page 15 (printed page 14), Equation (6); definitions of ΔG, ΔI, ΔX in Section 3.1, PDF page 10 (printed page 9)",
+      "source_statement_sha256": "6df019df78d0c47a1bca827f51ce05df5a013e128e79deda2f87978397411ef2",
+      "source_kind": "claim",
+      "spec_declaration": "paper_equation_6_expected_utilitySpec",
+      "proof_declaration": "paper_equation_6_expected_utility",
+      "dependency_order": 1,
+      "depends_on_source_items": [],
+      "owner": "unassigned",
+      "source_atoms": [],
+      "acceptance_conditions": [
+        "all exact source atoms are byte-pinned and semantically complete",
+        "the transparent Spec is equivalent to the full source target",
+        "every visible premise has source or checked derivation provenance",
+        "the proof closes without paper-local placeholders"
+      ]
+    },
+    {
+      "source_item": "First-order condition for effort (Section 3.5)",
+      "source_location": "Section 3.5, PDF page 16 (printed page 15), display after 'the first-order condition is'; also Section 3.4, PDF page 15 (printed page 14)",
+      "source_statement_sha256": "d5e861c82ff2ac3c2297bf53e8261ef410b6582988c4ebdf59838af890a757be",
+      "source_kind": "claim",
+      "spec_declaration": "paper_first_order_conditionSpec",
+      "proof_declaration": "paper_first_order_condition",
+      "dependency_order": 2,
+      "depends_on_source_items": [],
+      "owner": "unassigned",
+      "source_atoms": [],
+      "acceptance_conditions": [
+        "all exact source atoms are byte-pinned and semantically complete",
+        "the transparent Spec is equivalent to the full source target",
+        "every visible premise has source or checked derivation provenance",
+        "the proof closes without paper-local placeholders"
+      ]
+    },
+    {
+      "source_item": "Observation 1, complement part: public precision complements human effort",
+      "source_location": "Section 3.4, PDF pages 15-16 (printed pages 14-15), Observation 1 and the display ∂²U/∂e∂X = ΔX λI g(X) g(Y) > 0",
+      "source_statement_sha256": "1b0f0e38076b97ed25ee67345d24d332f1ea86f2f0191aa319e5f0008dd7917d",
+      "source_kind": "claim",
+      "spec_declaration": "paper_observation_1_complementSpec",
+      "proof_declaration": "paper_observation_1_complement",
+      "dependency_order": 3,
+      "depends_on_source_items": [],
+      "owner": "unassigned",
+      "source_atoms": [],
+      "acceptance_conditions": [
+        "all exact source atoms are byte-pinned and semantically complete",
+        "the transparent Spec is equivalent to the full source target",
+        "every visible premise has source or checked derivation provenance",
+        "the proof closes without paper-local placeholders"
+      ]
+    },
+    {
+      "source_item": "Observation 1, substitute part: agentic-AI precision substitutes for human effort",
+      "source_location": "Section 3.4, PDF page 16 (printed page 15), display ∂²U/∂e∂τA = ΔX G(X) λI g'(Y) < 0",
+      "source_statement_sha256": "d8563672164c217b1682dfc483c8aa82f8aaba9ee5fc946e7239ed884eb48f07",
+      "source_kind": "claim",
+      "spec_declaration": "paper_observation_1_substituteSpec",
+      "proof_declaration": "paper_observation_1_substitute",
+      "dependency_order": 4,
+      "depends_on_source_items": [],
+      "owner": "unassigned",
+      "source_atoms": [],
+      "acceptance_conditions": [
+        "all exact source atoms are byte-pinned and semantically complete",
+        "the transparent Spec is equivalent to the full source target",
+        "every visible premise has source or checked derivation provenance",
+        "the proof closes without paper-local placeholders"
+      ]
+    },
+    {
+      "source_item": "Section 3.5: the marginal utility of effort is strictly decreasing in effort",
+      "source_location": "Section 3.5, PDF page 16 (printed page 15), text 'Consequently, ∂U/∂e is strictly decreasing in e'",
+      "source_statement_sha256": "f666990a4706d7fe7bf21388d2db7649fed6e446a46a5175e4cc6c5de3d83fca",
+      "source_kind": "claim",
+      "spec_declaration": "paper_marginal_utility_strictly_decreasingSpec",
+      "proof_declaration": "paper_marginal_utility_strictly_decreasing",
+      "dependency_order": 5,
+      "depends_on_source_items": [],
+      "owner": "unassigned",
+      "source_atoms": [],
+      "acceptance_conditions": [
+        "all exact source atoms are byte-pinned and semantically complete",
+        "the transparent Spec is equivalent to the full source target",
+        "every visible premise has source or checked derivation provenance",
+        "the proof closes without paper-local placeholders"
+      ]
+    },
+    {
+      "source_item": "Section 3.5: the first-order condition has at most one solution (unique maximizer)",
+      "source_location": "Section 3.5, PDF page 16 (printed page 15), 'admits a unique and finite maximizer' and the definition of the best-response effort e(X, τA)",
+      "source_statement_sha256": "bdd140f0eafaecac2a140ab3c36845813b63d0822ff4a2af7060a9706b9d3fa0",
+      "source_kind": "claim",
+      "spec_declaration": "paper_best_response_uniqueSpec",
+      "proof_declaration": "paper_best_response_unique",
+      "dependency_order": 6,
+      "depends_on_source_items": [],
+      "owner": "unassigned",
+      "source_atoms": [],
+      "acceptance_conditions": [
+        "all exact source atoms are byte-pinned and semantically complete",
+        "the transparent Spec is equivalent to the full source target",
+        "every visible premise has source or checked derivation provenance",
+        "the proof closes without paper-local placeholders"
+      ]
+    },
+    {
+      "source_item": "Section 3.5: the first-order condition has a solution (a finite maximizer exists)",
+      "source_location": "Section 3.5, PDF page 16 (printed page 15), displays ∂U/∂e at e = 0 ≥ 0 and lim ∂U/∂e < 0, 'admits a unique and finite maximizer'",
+      "source_statement_sha256": "100d97ee9eaa6772429621b6fa85bcdfbcd0090def341d2e20540785ebc25d45",
+      "source_kind": "claim",
+      "spec_declaration": "paper_best_response_existsSpec",
+      "proof_declaration": "paper_best_response_exists",
+      "dependency_order": 7,
+      "depends_on_source_items": [],
+      "owner": "unassigned",
+      "source_atoms": [],
+      "acceptance_conditions": [
+        "all exact source atoms are byte-pinned and semantically complete",
+        "the transparent Spec is equivalent to the full source target",
+        "every visible premise has source or checked derivation provenance",
+        "the proof closes without paper-local placeholders"
+      ]
+    },
+    {
+      "source_item": "Observation 2 (in X): best-response effort is increasing in public precision",
+      "source_location": "Section 3.5, PDF page 17 (printed page 16), Observation 2",
+      "source_statement_sha256": "4fa914420fd94a61083a903acf1cdbecdd81f18b165568d322e55e4cce4e78a9",
+      "source_kind": "claim",
+      "spec_declaration": "paper_observation_2_increasing_in_XSpec",
+      "proof_declaration": "paper_observation_2_increasing_in_X",
+      "dependency_order": 8,
+      "depends_on_source_items": [],
+      "owner": "unassigned",
+      "source_atoms": [],
+      "acceptance_conditions": [
+        "all exact source atoms are byte-pinned and semantically complete",
+        "the transparent Spec is equivalent to the full source target",
+        "every visible premise has source or checked derivation provenance",
+        "the proof closes without paper-local placeholders"
+      ]
+    },
+    {
+      "source_item": "Observation 2 (in τA): best-response effort is decreasing in agentic-AI precision",
+      "source_location": "Section 3.5, PDF page 17 (printed page 16), Observation 2",
+      "source_statement_sha256": "8c01799b7d68b56c8f045ea10266f7f93e5c8a945fbb445b1469dbfe138e7c13",
+      "source_kind": "claim",
+      "spec_declaration": "paper_observation_2_decreasing_in_tauSpec",
+      "proof_declaration": "paper_observation_2_decreasing_in_tau",
+      "dependency_order": 9,
+      "depends_on_source_items": [],
+      "owner": "unassigned",
+      "source_atoms": [],
+      "acceptance_conditions": [
+        "all exact source atoms are byte-pinned and semantically complete",
+        "the transparent Spec is equivalent to the full source target",
+        "every visible premise has source or checked derivation provenance",
+        "the proof closes without paper-local placeholders"
+      ]
+    },
+    {
+      "source_item": "Lemma 1 (monotonicity): the state transition map F is strictly increasing",
+      "source_location": "Section 3.6, PDF page 18 (printed page 17), Lemma 1; transition map F defined in Equation (8), PDF page 17 (printed page 16)",
+      "source_statement_sha256": "90bd91576baaac36c546ec9382822a64dea3ccba337388def6c24d942dbbc99b",
+      "source_kind": "lemma",
+      "spec_declaration": "paper_lemma_1_transition_strictly_increasingSpec",
+      "proof_declaration": "paper_lemma_1_transition_strictly_increasing",
+      "dependency_order": 10,
+      "depends_on_source_items": [],
+      "owner": "unassigned",
+      "source_atoms": [],
+      "acceptance_conditions": [
+        "all exact source atoms are byte-pinned and semantically complete",
+        "the transparent Spec is equivalent to the full source target",
+        "every visible premise has source or checked derivation provenance",
+        "the proof closes without paper-local placeholders"
+      ]
+    },
+    {
+      "source_item": "Lemma 1 (bounds): the transition map takes values in (0, Σ^{-2})",
+      "source_location": "Section 3.5, PDF page 18 (printed page 17), display '0 ≤ F(X) < Σ^{-2} for all finite X'",
+      "source_statement_sha256": "74974cbe5b366e9983a827855c886af6a0a9dcbf019d6fb502bf1ab785b8ef53",
+      "source_kind": "claim",
+      "spec_declaration": "paper_lemma_1_transition_boundsSpec",
+      "proof_declaration": "paper_lemma_1_transition_bounds",
+      "dependency_order": 11,
+      "depends_on_source_items": [],
+      "owner": "unassigned",
+      "source_atoms": [],
+      "acceptance_conditions": [
+        "all exact source atoms are byte-pinned and semantically complete",
+        "the transparent Spec is equivalent to the full source target",
+        "every visible premise has source or checked derivation provenance",
+        "the proof closes without paper-local placeholders"
+      ]
+    },
+    {
+      "source_item": "Proposition 2 (Comparative Statics of F), aggregation scale I",
+      "source_location": "Section 3.6, PDF page 19 (printed page 18), Proposition 2",
+      "source_statement_sha256": "3f79d7a1b39d1115bd4bf324285808002d7c81052bf224b1cd67a666ae3a4158",
+      "source_kind": "proposition",
+      "spec_declaration": "paper_proposition_2_increasing_in_ISpec",
+      "proof_declaration": "paper_proposition_2_increasing_in_I",
+      "dependency_order": 12,
+      "depends_on_source_items": [],
+      "owner": "unassigned",
+      "source_atoms": [],
+      "acceptance_conditions": [
+        "all exact source atoms are byte-pinned and semantically complete",
+        "the transparent Spec is equivalent to the full source target",
+        "every visible premise has source or checked derivation provenance",
+        "the proof closes without paper-local placeholders"
+      ]
+    },
+    {
+      "source_item": "Proposition 2 (Comparative Statics of F), agentic-AI precision τA",
+      "source_location": "Section 3.6, PDF page 19 (printed page 18), Proposition 2 and the following paragraph",
+      "source_statement_sha256": "23397629125399e459c53a974bfb239a56b0331ae04900978ee4e62c811cabbb",
+      "source_kind": "proposition",
+      "spec_declaration": "paper_proposition_2_decreasing_in_tauSpec",
+      "proof_declaration": "paper_proposition_2_decreasing_in_tau",
+      "dependency_order": 13,
+      "depends_on_source_items": [],
+      "owner": "unassigned",
+      "source_atoms": [],
+      "acceptance_conditions": [
+        "all exact source atoms are byte-pinned and semantically complete",
+        "the transparent Spec is equivalent to the full source target",
+        "every visible premise has source or checked derivation provenance",
+        "the proof closes without paper-local placeholders"
+      ]
+    }
+  ],
+  "seal_requirements": {
+    "state": "sealed",
+    "inventory_complete": true,
+    "every_item_has_owner": true,
+    "dependency_order_is_total": true,
+    "every_source_atom_has_locator_exact_byte_slice_quote_and_sha256": true,
+    "pdf_atoms_use_pinned_normalized_source_text_receipt": true
+  }
+}
