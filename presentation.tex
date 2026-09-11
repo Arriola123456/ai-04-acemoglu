@@ -146,8 +146,8 @@
       sections and statements; the effort cost is written with a curvature $\alpha$ in February and with the
       Frisch elasticity $\varepsilon$ in May, $\alpha-1=1/\varepsilon$ --- so "$\alpha-1>1/4$'' became "$\varepsilon<4$''.
       The issue's "Section 2'' is \emph{Related Literature} in both; the model is Section 3.
-    \item \textbf{By hand} (\texttt{hand/}): Equation (6) from the two success probabilities under $\Delta_I=0$,
-      and both cross-partials of Observation 1.
+    \item \textbf{By hand} (\texttt{hand/}, backup B10): primitives, signals and effort cost (February notation
+      $e^\alpha/\alpha$), Assumption 1, and Equation (6) under $\Delta_I=0$.
     \item \textbf{SymPy} with the real Gaussian: $\partial^2U/\partial e\partial X>0$ and $\partial^2U/\partial e\partial\tau_A<0$
       on 2{,}000 random parameter points (100\%), and $g'(\tau)<0$ in closed form.
     \item \textbf{Numerics} (backup B1--B5): best response, the transition map for $\varepsilon=2$ (unique steady
@@ -160,8 +160,7 @@
       Proposition 2 --- all proved, no \texttt{sorry}; \texttt{lake build}: success; \texttt{check --fast}: exit 0.
       Status \emph{partially formalized}: the Gaussian facts are hypotheses; dynamics and welfare not formalized.
     \item \textbf{This week's trap} (backup B9): welfare is \emph{not} monotone in AI accuracy (Props.\ 10--11);
-      Section 5 relaxes aggregation, synthetic data and effort separability --- the production-side assumption
-      it never touches is $\Delta_I=0$.
+      Section 5 relaxes aggregation, synthetic data and separability --- never the production-side $\Delta_I=0$.
   \end{itemize}
 \end{frame}
 
@@ -169,10 +168,11 @@
 \begin{frame}{4 \textperiodcentered{} Where I did not believe the AI}
   \begin{columns}[T]
     \column{0.30\textwidth}
-      \IfFileExists{hand/derivacion-a-mano.pdf}{%
-        \includegraphics[page=1,height=0.62\textheight]{hand/derivacion-a-mano.pdf}}{%
-        \fbox{\parbox{0.8\linewidth}{\centering\scriptsize hand derivation\\ \texttt{hand/}\\ \texttt{derivacion-a-mano.pdf}}}}
-      \\[2pt]{\scriptsize On screen: Equation (6) and the two cross-partials, by hand.}
+      \IfFileExists{hand/hand-derivation.pdf}{%
+        \includegraphics[page=2,height=0.62\textheight]{hand/hand-derivation.pdf}}{%
+        \fbox{\parbox{0.8\linewidth}{\centering\scriptsize hand derivation\\ \texttt{hand/}\\ \texttt{hand-derivation.pdf}}}}
+      \\[2pt]{\scriptsize Page 2 of the hand derivation: $f$, $U$, the stocks $X,Y$, and Assumption 1
+      ($\Delta_I=0$). All three pages in B10.}
     \column{0.68\textwidth}\footnotesize
       \textbf{Claim 1 (an LLM, cold): "welfare rises with AI accuracy --- better information cannot hurt.''}
       Paper (Section 4.3):
@@ -338,6 +338,18 @@ theorem effort_incentive_survives_without_general_knowledge (ΔI ΔX lamI p0 τ 
       $F(0)>0$, no collapse fixed point (Lean, B8). Also untouched: the additive precision in (4), i.e.\ AI and
       own learning as perfect substitutes for context.
   \end{columns}
+\end{frame}
+
+%================= BACKUP: DERIVACIÓN A MANO ==========================
+\begin{frame}{B10 \textperiodcentered{} Hand derivation: primitives, Assumption 1, Equation (6)}
+  \begin{center}
+    \includegraphics[page=1,height=0.70\textheight]{hand/hand-derivation.pdf}\hspace{6pt}%
+    \includegraphics[page=2,height=0.70\textheight]{hand/hand-derivation.pdf}\hspace{6pt}%
+    \includegraphics[page=3,height=0.70\textheight]{hand/hand-derivation.pdf}
+  \end{center}
+  \vspace{-4pt}
+  {\scriptsize \texttt{hand/hand-derivation.pdf}, February notation: cost $e^{\alpha}/\alpha$, $\alpha-1=1/\varepsilon$
+  in the May version. Page 3 boxes Equation (6).}
 \end{frame}
 
 \end{document}

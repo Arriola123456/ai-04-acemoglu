@@ -140,7 +140,7 @@ substitutes for context.
 |---|---|
 | `README.md` | This page |
 | `prompts.md` | Raw prompts and answers: the Claude Code session, and the LLM "cold" prompts of the trap |
-| `hand/derivacion-a-mano.pdf` | Hand derivation of Equation 6 and of both cross-partials of Observation 1 |
+| `hand/hand-derivation.pdf` | Hand derivation, 3 pages: the primitives (states, private and public signals, effort cost in the February notation $e^\alpha/\alpha$, the AI signal), the production function and knowledge stocks, Assumption 1 ($\Delta_I = 0$, $\Delta_X > 0$), and Equation 6 |
 | `presentation.tex` / `.pdf` | The 5-minute deck (title + 4 slides) followed by backup slides: five figures, one per slide, three Lean slides, and the trap |
 | `lean/` | The EconCSLib paper folder `papers/AKO26KnowledgeCollapse/` as generated: 13 Specs, 13 closed proofs, reports, DAG, audit stubs, `docs/RUN_LOG.md`, `docs/CHECK_FAST_OUTPUT.txt` |
 | `analysis/` | `model_numerics.py`: SymPy check of Observation 1 with the real Gaussian, best response, transition maps, welfare; figures in `analysis/figures/` |

@@ -59,6 +59,14 @@ The full tool-level record is the Git history of this repository and
 7. Wrote this README, the deck (title + 4 slides, then backup slides with one
    figure per slide, three Lean slides and the trap) and this file.
 
+**User (2026-09-10):** `En el escritorio te deje el archivo hand-derivation.pdf, incorporalo al repo`
+
+**Assistant:** copied the file to `hand/hand-derivation.pdf` (3 pages, written
+by the author in the February notation, cost $e^\alpha/\alpha$), pointed slide
+4 at its page 2 (Assumption 1), added backup slide B10 with the three pages,
+fixed the README row that had announced cross-partials the photo does not
+contain, recompiled the deck.
+
 **Assistant's own answers to the trap prompts (not cold — written after
 reading the paper; kept here for contrast with Section 1):**
 
